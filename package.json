@@ -1,0 +1,18 @@
+{
+  "name": "argent-derive",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0",
+    "@scure/bip32": "^1.5.0",
+    "ethers": "^6.13.2",
+    "starknet": "^6.11.0"
+  }
+}
