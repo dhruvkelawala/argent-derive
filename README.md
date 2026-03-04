@@ -26,6 +26,26 @@ cp ./dist/argent-derive /usr/local/bin/argent-derive
 argent-derive --help
 ```
 
+### Release binaries
+
+Use GitHub Releases for users who do not have Bun installed:
+
+1. Tag a release:
+
+   ```bash
+   git tag v0.1.0
+   git push origin v0.1.0
+   ```
+
+2. The CI workflow builds Linux, macOS, and Windows binaries and publishes them to
+   the GitHub release automatically.
+
+3. Users can download and run the correct executable from the release page:
+
+   - `argent-derive-linux-x64`
+   - `argent-derive-macos-x64`
+   - `argent-derive-windows-x64.exe`
+
 The CLI now lets you:
 
 - enter a seed phrase
