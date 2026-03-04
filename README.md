@@ -43,8 +43,8 @@ Use GitHub Releases for users who do not have Bun installed:
 3. Users can download and run the correct executable from the release page:
 
    - `argent-derive-linux-x64`
-   - `argent-derive-macos-x64`
-   - `argent-derive-macos-arm64`
+   - `argent-derive-macos-arm64` (Apple Silicon)
+   - `argent-derive-macos-x64` (Intel)
    - `argent-derive-windows-x64.exe`
 
 The CLI now lets you:

@@ -24,15 +24,19 @@ jobs:
           - os: ubuntu-latest
             artifact_name: argent-derive-linux-x64
             binary_name: argent-derive-linux-x64
+            target: bun-linux-x64
           - os: macos-14
             artifact_name: argent-derive-macos-arm64
             binary_name: argent-derive-macos-arm64
-          - os: macos-13
+            target: bun-darwin-arm64
+          - os: macos-14
             artifact_name: argent-derive-macos-x64
             binary_name: argent-derive-macos-x64
+            target: bun-darwin-x64
           - os: windows-latest
             artifact_name: argent-derive-windows-x64
             binary_name: argent-derive-windows-x64.exe
+            target: bun-windows-x64
 
     runs-on: ${{ matrix.os }}
 
@@ -49,7 +53,7 @@ jobs:
         run: bun install
 
       - name: Compile standalone binary
-        run: bun build --compile --minify --target=bun index.ts --outfile=dist/${{ matrix.binary_name }}
+        run: bun build --compile --minify --target=${{ matrix.target }} index.ts --outfile=dist/${{ matrix.binary_name }}
 
       - name: Upload compiled binary
         uses: actions/upload-artifact@v4
@@ -94,6 +98,7 @@ jobs:
         run: |
           chmod +x dist/argent-derive-linux-x64/argent-derive-linux-x64
           chmod +x dist/argent-derive-macos-x64/argent-derive-macos-x64
+          chmod +x dist/argent-derive-macos-arm64/argent-derive-macos-arm64
 
       - name: Create release and upload binaries
         uses: softprops/action-gh-release@v2
