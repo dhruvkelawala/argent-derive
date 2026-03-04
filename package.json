@@ -2,6 +2,10 @@
   "name": "argent-derive",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build --compile --minify --target=bun index.ts --outfile=dist/argent-derive",
+    "start": "bun run index.ts"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
