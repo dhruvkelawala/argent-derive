@@ -73,4 +73,8 @@ Environment variables:
 
 - `RPC_URL`: optional RPC endpoint used as the default when you select the custom URL and leave it blank.
 
+Technical docs:
+
+- [Detailed architecture and upgrade flow](./TECHNICAL.md)
+
 This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
