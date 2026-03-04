@@ -44,6 +44,7 @@ Use GitHub Releases for users who do not have Bun installed:
 
    - `argent-derive-linux-x64`
    - `argent-derive-macos-x64`
+   - `argent-derive-macos-arm64`
    - `argent-derive-windows-x64.exe`
 
 The CLI now lets you:

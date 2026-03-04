@@ -22,7 +22,10 @@ jobs:
           - os: ubuntu-latest
             artifact_name: argent-derive-linux-x64
             binary_name: argent-derive-linux-x64
-          - os: macos-latest
+          - os: macos-14
+            artifact_name: argent-derive-macos-arm64
+            binary_name: argent-derive-macos-arm64
+          - os: macos-13
             artifact_name: argent-derive-macos-x64
             binary_name: argent-derive-macos-x64
           - os: windows-latest
@@ -73,6 +76,12 @@ jobs:
           name: argent-derive-macos-x64
           path: dist/argent-derive-macos-x64
 
+      - name: Download macOS arm64 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: argent-derive-macos-arm64
+          path: dist/argent-derive-macos-arm64
+
       - name: Download windows artifact
         uses: actions/download-artifact@v4
         with:
@@ -92,4 +101,5 @@ jobs:
           files: |
             dist/argent-derive-linux-x64/argent-derive-linux-x64
             dist/argent-derive-macos-x64/argent-derive-macos-x64
+            dist/argent-derive-macos-arm64/argent-derive-macos-arm64
             dist/argent-derive-windows-x64/argent-derive-windows-x64.exe
