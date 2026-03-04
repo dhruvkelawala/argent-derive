@@ -67,6 +67,42 @@ Quick start:
 - Enter how many account numbers to check per path (for example `10`)
 - Pick the account number from the list and confirm with `yes` to upgrade
 
+### Running downloaded release binaries
+
+When users download a release binary, they should run it from a terminal.
+
+On macOS:
+
+```bash
+chmod +x argent-derive-macos-<arch>
+./argent-derive-macos-<arch>
+```
+
+Use your CPU architecture:
+
+- `argent-derive-macos-x64` for Intel Macs
+- `argent-derive-macos-arm64` for Apple Silicon
+
+If your seed phrase contains spaces, use quotes:
+
+```bash
+./argent-derive-macos-arm64 --seed-phrase "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+```
+
+On Windows (PowerShell):
+
+```powershell
+.\argent-derive-windows-x64.exe
+```
+
+On Windows (non-interactive mode from CI/automation):
+
+```powershell
+.\argent-derive-windows-x64.exe --non-interactive --network mainnet --seed-phrase "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about" --scan-count 1 --no-color
+```
+
+Tip: if you double-click the binary instead of running it in a terminal, the tool may exit immediately and prompts may not appear.
+
 Non-interactive / CI mode:
 
 ```bash
